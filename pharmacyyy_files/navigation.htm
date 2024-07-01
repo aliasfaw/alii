@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr" lang="en"><head>
+    <link rel="icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://localhost/phpmyadmin/favicon.ico" type="image/x-icon">
+    <title>phpMyAdmin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- base href="http://localhost/phpmyadmin/navigation.php?server=1&token=9071d5ae5b17bdeaa16778f4fe17247a&db=pharmacyy&table=&lang=en-utf-8&collation_connection=utf8_general_ci" -->
+    <link rel="stylesheet" type="text/css" href="navigation_data/phpmyadmin.css">
+    <script type="text/javascript" src="navigation_data/navigation.js"></script>
+    <script type="text/javascript" src="navigation_data/functions.js"></script>
+    <script type="text/javascript">
+    // <![CDATA[
+    var image_minus = './themes/original/img/b_minus.png';
+    var image_plus = './themes/original/img/b_plus.png';
+
+    // INIT PMA_setFrameSize
+    var onloadCnt = 0; 
+    var onLoadHandler = window.onload;  
+    var resizeHandler = window.onresize;
+    window.document.onresize  = resizeHandler;
+    window.onload = function() {
+        if (onloadCnt == 0) {
+            if (typeof(onLoadHandler) == "function") { 
+                onLoadHandler(); 
+            }
+            if (typeof(PMA_setFrameSize) != 'undefined' && typeof(PMA_setFrameSize) == 'function') { 
+                PMA_setFrameSize(); 
+            }
+            onloadCnt++;
+        }
+    };
+    window.onresize = function() {
+        if (typeof(resizeHandler) == "function") { 
+            resizeHandler(); 
+        }
+        if (typeof(PMA_saveFrameSize) != 'undefined' && typeof(PMA_saveFrameSize) == 'function') { 
+            PMA_saveFrameSize(); 
+        }
+    };
+    // ]]>
+    </script>
+        <!--[if IE 6]>
+    <style type="text/css">
+    /* <![CDATA[ */
+    html {
+        overflow-y: scroll;
+    }
+    /* ]]> */
+    </style>
+    <![endif]-->
+</head>
+
+<body id="body_leftFrame">
+<div id="pmalogo">
+<a href="http://localhost/phpmyadmin/main.php?token=9071d5ae5b17bdeaa16778f4fe17247a" target="frame_content"><img src="navigation_data/logo_left.png" alt="phpMyAdmin" id="imgpmalogo"></a>
+</div>
+<div id="leftframelinks">
+<a href="http://localhost/phpmyadmin/main.php?token=9071d5ae5b17bdeaa16778f4fe17247a" title="Home"><img class="icon" src="navigation_data/b_home.png" alt="Home" width="16" height="16"></a>
+<a href="http://localhost/phpmyadmin/querywindow.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;no_js=true" title="Query window" onclick="javascript:if (window.parent.open_querywindow()) return false;"><img class="icon" src="navigation_data/b_selboard.png" alt="Query window" width="16" height="16"></a>
+    <a href="http://localhost/phpmyadmin/Documentation.html" target="documentation" title="phpMyAdmin documentation"><img class="icon" src="navigation_data/b_docs.png" alt="phpMyAdmin documentation" width="16" height="16"></a>
+    <a href="http://dev.mysql.com/doc/refman/5.1/en/index.html" target="mysql_doc"><img class="icon" src="navigation_data/b_sqlhelp.png" alt="Documentation" title="Documentation" width="16" height="16"></a>
+</div>
+
+    <div id="databaseList">
+    <form method="post" action="index.php" target="_parent" id="left">
+    <label for="lightm_db">Database</label>
+    <input type="hidden" name="token" value="9071d5ae5b17bdeaa16778f4fe17247a">
+<select name="db" id="lightm_db" xml:lang="en" dir="ltr" onchange="if (this.value != '') window.parent.openDb(this.value);">
+<option value="" dir="ltr">(Databases) ...</option>
+<option value="information_schema" title="">information_schema (28)</option>
+<option value="mysql" title="">mysql (23)</option>
+<option value="pharmacy" title="">pharmacy (12)</option>
+<option value="pharmacyy" title="" selected="selected">pharmacyy (8)</option>
+</select>
+<noscript>
+<input type="submit" name="Go" value="Go" />
+</noscript>
+</form>
+</div>
+
+<div id="left_tableList">
+    <p><a class="item" href="http://localhost/phpmyadmin/db_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a" title="">
+    <span class="navi_dbName">pharmacyy</span> <bdo dir="ltr">(8)</bdo> </a></p><ul id="subel0"><li>
+<a title="Structure:  (1 Rows)" id="quick_pharmacyy.customer_bill" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=customer_bill&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.customer_bill" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=customer_bill&amp;pos=0" title="Browse:  (1 Rows)" id="pharmacyy.customer_bill">customer_bill</a></li>
+<li>
+<a title="Structure:  (0 Rows)" id="quick_pharmacyy.customer_buy_drugs" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=customer_buy_drugs&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.customer_buy_drugs" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=customer_buy_drugs&amp;pos=0" title="Browse:  (0 Rows)" id="pharmacyy.customer_buy_drugs">customer_buy_drugs</a></li>
+<li>
+<a title="Structure:  (3 Rows)" id="quick_pharmacyy.expired_drugs" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=expired_drugs&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.expired_drugs" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=expired_drugs&amp;pos=0" title="Browse:  (3 Rows)" id="pharmacyy.expired_drugs">expired_drugs</a></li>
+<li>
+<a title="Structure:  (2 Rows)" id="quick_pharmacyy.sold_drugs" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=sold_drugs&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.sold_drugs" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=sold_drugs&amp;pos=0" title="Browse:  (2 Rows)" id="pharmacyy.sold_drugs">sold_drugs</a></li>
+<li>
+<a title="Structure:  (2 Rows)" id="quick_pharmacyy.stock" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=stock&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.stock" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=stock&amp;pos=0" title="Browse:  (2 Rows)" id="pharmacyy.stock">stock</a></li>
+<li>
+<a title="Structure:  (2 Rows)" id="quick_pharmacyy.store" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=store&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.store" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=store&amp;pos=0" title="Browse:  (2 Rows)" id="pharmacyy.store">store</a></li>
+<li>
+<a title="Structure:  (2 Rows)" id="quick_pharmacyy.user" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=user&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.user" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=user&amp;pos=0" title="Browse:  (2 Rows)" id="pharmacyy.user">user</a></li>
+<li class=" marked">
+<a title="Structure:  (5 Rows)" id="quick_pharmacyy.user_account" href="http://localhost/phpmyadmin/tbl_structure.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=user_account&amp;goto=tbl_structure.php"><img class="icon" src="navigation_data/b_sbrowse.png" id="icon_pharmacyy.user_account" alt="Structure" width="10" height="10"></a>
+<a href="http://localhost/phpmyadmin/sql.php?db=pharmacyy&amp;token=9071d5ae5b17bdeaa16778f4fe17247a&amp;table=user_account&amp;pos=0" title="Browse:  (5 Rows)" id="pharmacyy.user_account">user_account</a></li>
+</ul></div>
+</body></html>
